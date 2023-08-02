@@ -4,58 +4,30 @@
 }
 
 
-@*@Html.Partial("_MeasurersListDataTable")*@
-
-<table class="table" id="dataTable">
-    <thead>
-        <tr>
-            <th>Model</th>
-            <th>SerialNumber</th>
-            <th>CustomerNumber</th>
-            <th>Name</th>
-            <th>Address</th>
-            <th>City</th>
-            <th>Notes</th>
-            <th>Status</th>
-            <th>LastLecture</th>
-        </tr>
-    </thead>
-    <tbody>
-    </tbody>
-</table>
+<table id="grid"></table>
 
 @section Scripts{
 
-    <link href="https://cdn.datatables.net/v/dt/dt-1.13.6/datatables.min.css" rel="stylesheet">
-    <script src="https://cdn.datatables.net/v/dt/dt-1.13.6/datatables.min.js"></script>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-
     <script>
         $(document).ready(function () {
-            $('#datatable').DataTable({
-                "processing": true,
-                "serverSide": true,
-                "ajax": {
-                    "url": "@Url.Content("~/Home/GetMeasurers")",
-                    "type": "POST",
-                    "datatype": "json"
-                },
-                "pageLength": 10,
-                "filter": false,
-                "responsivePriority": 1,
-                "data": null,
-                "columns": [
-                    { "data": "Model", "name": "Model", "autoWidth": true },
-                    { "data": "SerialNumber", "name": "SerialNumber", "autoWidth": true },
-                    { "data": "CustomerNumber", "name": "CustomerNumber", "autoWidth": true },
-                    { "data": "Name", "name": "Name", "autoWidth": true },
-                    { "data": "Address", "name": "Address", "autoWidth": true },
-                    { "data": "City", "name": "City", "autoWidth": true },
-                    { "data": "Notes", "name": "Notes", "autoWidth": true },
-                    { "data": "Status", "name": "Status", "autoWidth": true },
-                    { "data": "LastLecture", "name": "LastLecture", "autoWidth": true },
-                ]
+            /*$('#datatable').DataTable()*/
+
+/*            let table = new DataTable('#dataTable');*/
+
+            grid = $("#grid").grid({
+                dataSource: "../Home/GetMeasurers",
+                columns: [
+                    { field: "model", title: "Modelo"},
+                    { field: "serialNumber" , title: "Numero"},
+                    { field: "customerNumber", title: "Cliente"},
+                    { field: "name", title: "Nombre"},
+                    { field: "address", title: "Direccion"},
+                    { field: "city", title: "Ciudad"},
+                    { field: "notes", title: "Nota"},
+                    { field: "status", title: "Estado"},
+                    { field: "lastLecture", title: "Ultima Lectura"}
+                ],
+                pager: { enable: true, limit: 10, sizes: [2, 5, 10, 20] }
             });
         });
     </script>

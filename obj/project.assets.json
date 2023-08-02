@@ -6499,26 +6499,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Walter Armando Cruz\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Users\\bruno\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Walter Armando Cruz\\Desarrollos\\VISUAL STUDIO\\StoreyGrid\\Grilla.csproj",
+      "projectUniqueName": "D:\\Escritorio\\Programacion\\Storey\\StoreyGrid\\Grilla.csproj",
       "projectName": "Grilla",
-      "projectPath": "C:\\Users\\Walter Armando Cruz\\Desarrollos\\VISUAL STUDIO\\StoreyGrid\\Grilla.csproj",
-      "packagesPath": "C:\\Users\\Walter Armando Cruz\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Walter Armando Cruz\\Desarrollos\\VISUAL STUDIO\\StoreyGrid\\obj\\",
+      "projectPath": "D:\\Escritorio\\Programacion\\Storey\\StoreyGrid\\Grilla.csproj",
+      "packagesPath": "C:\\Users\\bruno\\.nuget\\packages\\",
+      "outputPath": "D:\\Escritorio\\Programacion\\Storey\\StoreyGrid\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
         "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\Walter Armando Cruz\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\bruno\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -6527,7 +6524,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -6585,7 +6581,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.416\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   },

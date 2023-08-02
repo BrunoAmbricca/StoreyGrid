@@ -21,22 +21,7 @@ namespace Grilla.Controllers
 
         public IActionResult Index()
         {
-            MeasurerService measurerService = new MeasurerService();
-
-            var measurers = measurerService.GetMeasurers().Result;
-            //var measurers = new List<Measurer>();
-
             return View();
-        }
-
-        public IActionResult Index2()
-        {
-            MeasurerService measurerService = new MeasurerService();
-
-            var measurers = measurerService.GetMeasurers().Result;
-            //var measurers = new List<Measurer>();
-
-            return View(measurers);
         }
 
         [HttpGet]
@@ -47,13 +32,12 @@ namespace Grilla.Controllers
             var measurers = measurerService.GetMeasurers().Result;
 
             var totalCount = measurers.Count();
-            var totalPages = (int)Math.Ceiling((decimal)totalCount / limit);
+
             var measurersPerPage = measurers
                 .Skip((page - 1) * limit)
                 .Take(limit)
                 .ToList();
 
-            //return Json(new { data = measurersPerPage });
             return Json(new { records = measurersPerPage, total = totalCount });
 
         }

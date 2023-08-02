@@ -40,20 +40,22 @@ namespace Grilla.Controllers
         }
 
         [HttpGet]
-        public ActionResult GetMeasurers(int page = 1, int pageSize = 10)
+        public ActionResult GetMeasurers(int page = 1, int limit = 10)
         {
             MeasurerService measurerService = new MeasurerService();
 
             var measurers = measurerService.GetMeasurers().Result;
 
             var totalCount = measurers.Count();
-            var totalPages = (int)Math.Ceiling((decimal)totalCount / pageSize);
+            var totalPages = (int)Math.Ceiling((decimal)totalCount / limit);
             var measurersPerPage = measurers
-                .Skip((page - 1) * pageSize)
-                .Take(pageSize)
+                .Skip((page - 1) * limit)
+                .Take(limit)
                 .ToList();
 
-            return Json(new { data = measurers });
+            //return Json(new { data = measurersPerPage });
+            return Json(new { records = measurersPerPage, total = totalCount });
+
         }
 
         public IActionResult Privacy()

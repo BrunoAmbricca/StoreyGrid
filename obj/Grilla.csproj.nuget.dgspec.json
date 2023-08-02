@@ -1,23 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Escritorio\\Programacion\\Storey\\Grilla\\Grilla.csproj": {}
+    "C:\\Users\\Walter Armando Cruz\\Desarrollos\\VISUAL STUDIO\\StoreyGrid\\Grilla.csproj": {}
   },
   "projects": {
-    "D:\\Escritorio\\Programacion\\Storey\\Grilla\\Grilla.csproj": {
+    "C:\\Users\\Walter Armando Cruz\\Desarrollos\\VISUAL STUDIO\\StoreyGrid\\Grilla.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Escritorio\\Programacion\\Storey\\Grilla\\Grilla.csproj",
+        "projectUniqueName": "C:\\Users\\Walter Armando Cruz\\Desarrollos\\VISUAL STUDIO\\StoreyGrid\\Grilla.csproj",
         "projectName": "Grilla",
-        "projectPath": "D:\\Escritorio\\Programacion\\Storey\\Grilla\\Grilla.csproj",
-        "packagesPath": "C:\\Users\\bruno\\.nuget\\packages\\",
-        "outputPath": "D:\\Escritorio\\Programacion\\Storey\\Grilla\\obj\\",
+        "projectPath": "C:\\Users\\Walter Armando Cruz\\Desarrollos\\VISUAL STUDIO\\StoreyGrid\\Grilla.csproj",
+        "packagesPath": "C:\\Users\\Walter Armando Cruz\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Walter Armando Cruz\\Desarrollos\\VISUAL STUDIO\\StoreyGrid\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\bruno\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Walter Armando Cruz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -26,6 +28,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -59,6 +62,10 @@
             "jQuery": {
               "target": "Package",
               "version": "[3.7.0, )"
+            },
+            "jQuery.jqGrid": {
+              "target": "Package",
+              "version": "[4.4.4, )"
             }
           },
           "imports": [
@@ -79,7 +86,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.416\\RuntimeIdentifierGraph.json"
         }
       }
     }

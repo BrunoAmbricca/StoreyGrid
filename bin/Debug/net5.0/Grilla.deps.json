@@ -37,6 +37,7 @@
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "5.0.2",
           "Newtonsoft.Json": "13.0.3",
           "jQuery": "3.7.0",
+          "jQuery.jqGrid": "4.4.4",
           "Microsoft.AspNetCore.Antiforgery": "5.0.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "5.0.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "5.0.0.0",
@@ -340,6 +341,17 @@
         }
       },
       "jQuery/3.7.0": {},
+      "jQuery.jqGrid/4.4.4": {
+        "dependencies": {
+          "jQuery": "3.7.0",
+          "jQuery.UI.Combined": "1.10.0"
+        }
+      },
+      "jQuery.UI.Combined/1.10.0": {
+        "dependencies": {
+          "jQuery": "3.7.0"
+        }
+      },
       "Microsoft.AspNet.Razor/3.2.9": {
         "runtime": {
           "lib/net45/System.Web.Razor.dll": {
@@ -969,7 +981,11 @@
           "System.Threading.Tasks": "4.3.0"
         }
       },
-      "System.Collections.Immutable/5.0.0": {},
+      "System.Collections.Immutable/5.0.0": {
+        "compile": {
+          "lib/netstandard2.0/System.Collections.Immutable.dll": {}
+        }
+      },
       "System.Composition/1.0.31": {
         "dependencies": {
           "System.Composition.AttributedModel": "1.0.31",
@@ -1344,7 +1360,11 @@
           "System.Runtime": "4.3.0"
         }
       },
-      "System.Reflection.Metadata/5.0.0": {},
+      "System.Reflection.Metadata/5.0.0": {
+        "compile": {
+          "lib/netstandard2.0/System.Reflection.Metadata.dll": {}
+        }
+      },
       "System.Reflection.Primitives/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.1.2",
@@ -3342,6 +3362,20 @@
       "sha512": "sha512-Ao474k6pawdNMzmcObA8GtsqUg9vAMHhDsDEs5TZEc4nTy2vtv8wsBI2c4OyR1OEyNUJG3O2AvGZZlXmRLpoZg==",
       "path": "jquery/3.7.0",
       "hashPath": "jquery.3.7.0.nupkg.sha512"
+    },
+    "jQuery.jqGrid/4.4.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-s73xrFBi4sonGzQWJd7ZTGJCaWHechXo/JtTIMq9flS3AFVAzu7pQ7alwJ6kBHAF0OrwbPGSFGZyfj9XNYEFtg==",
+      "path": "jquery.jqgrid/4.4.4",
+      "hashPath": "jquery.jqgrid.4.4.4.nupkg.sha512"
+    },
+    "jQuery.UI.Combined/1.10.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ubA0nnizWiMrokWGOx+XXVGgDsUZqNJuqkthmvR4gVBNVS2AZXUpN5A5huAyZO1aw6i1KBywa1FNskkT2FUEsw==",
+      "path": "jquery.ui.combined/1.10.0",
+      "hashPath": "jquery.ui.combined.1.10.0.nupkg.sha512"
     },
     "Microsoft.AspNet.Razor/3.2.9": {
       "type": "package",

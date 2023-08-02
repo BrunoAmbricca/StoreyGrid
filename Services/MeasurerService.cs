@@ -50,7 +50,7 @@ namespace Grilla.Services
 
         private List<Measurer> AddAdditionalMeasurers()
         {
-            var measurersAmount = 1000;
+            var measurersAmount = 1000000;
             List<Measurer> measurers = new();
 
             for (var i = 0; i < measurersAmount; i++)

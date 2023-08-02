@@ -4,7 +4,10 @@
 }
 
 
-@Html.Partial("_MeasurersList")
+@*@Html.Partial("_MeasurersList")*@
+
+
+<table id="grid"></table>
 
 @section Scripts{
 
@@ -15,7 +18,23 @@
         $(document).ready(function () {
             /*$('#datatable').DataTable()*/
 
-            let table = new DataTable('#dataTable');
+/*            let table = new DataTable('#dataTable');*/
+
+            grid = $("#grid").grid({
+                dataSource: "../Home/GetMeasurers",
+                columns: [
+                    { field: "model" },
+                    { field: "serialNumber" },
+                    { field: "customerNumber" },
+                    { field: "name" },
+                    { field: "address" },
+                    { field: "city" },
+                    { field: "notes" },
+                    { field: "status" },
+                    { field: "lastLecture" }
+                ],
+                pager: { enable: true, limit: 10, sizes: [2, 5, 10, 20] }
+            });
         });
     </script>
 }

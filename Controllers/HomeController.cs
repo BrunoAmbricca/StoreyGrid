@@ -7,7 +7,6 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
-using System.Web.Helpers;
 
 namespace Grilla.Controllers
 {
@@ -22,7 +21,7 @@ namespace Grilla.Controllers
 
         public IActionResult Index()
         {
-            MeasurerService measurerService = new();
+            MeasurerService measurerService = new MeasurerService();
 
             var measurers = measurerService.GetMeasurers().Result;
             //var measurers = new List<Measurer>();
@@ -32,7 +31,7 @@ namespace Grilla.Controllers
 
         public IActionResult Index2()
         {
-            MeasurerService measurerService = new();
+            MeasurerService measurerService = new MeasurerService();
 
             var measurers = measurerService.GetMeasurers().Result;
             //var measurers = new List<Measurer>();
@@ -41,15 +40,20 @@ namespace Grilla.Controllers
         }
 
         [HttpGet]
-        public ActionResult GetMeasurers()
+        public ActionResult GetMeasurers(int page = 1, int pageSize = 10)
         {
-            MeasurerService measurerService = new();
+            MeasurerService measurerService = new MeasurerService();
 
             var measurers = measurerService.GetMeasurers().Result;
 
-            var recordsTotal = measurers.Count();
+            var totalCount = measurers.Count();
+            var totalPages = (int)Math.Ceiling((decimal)totalCount / pageSize);
+            var measurersPerPage = measurers
+                .Skip((page - 1) * pageSize)
+                .Take(pageSize)
+                .ToList();
 
-            return Json(new { draw = "", recordsFiltered = recordsTotal, recordsTotal = recordsTotal, data = measurers});
+            return Json(new { data = measurers });
         }
 
         public IActionResult Privacy()
